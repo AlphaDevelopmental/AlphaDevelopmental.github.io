@@ -293,7 +293,8 @@ a.project-card:hover{border-color:var(--glass-border-hover);transform:translateY
 .project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;position:relative;}
 .tag-webdev{color:var(--cyan);}
 .tag-appsec{color:var(--danger);}
-.tag-training{color:var(--amber);}
+.tag-devops{color:var(--emerald);}
+.tag-ai{color:var(--amber);}
 .project-link-arrow{color:var(--cyan);font-size:15px;}
 .project-card h3{font-family:var(--font-display);font-size:16.5px;margin:0 0 8px;font-weight:600;position:relative;}
 .project-card p{color:var(--text-dim);font-size:13.5px;margin:0 0 14px;position:relative;}

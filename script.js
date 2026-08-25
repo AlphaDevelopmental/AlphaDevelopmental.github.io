@@ -21,16 +21,17 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     },
     skills() {
       return [
-        '[WEB]   Web & Software Development',
-        '[SEC]   Cybersecurity & AppSec',
-        '[TRAIN] Technical Training & Curriculum',
+        '[ENG]   Product & Full-Stack Engineering',
+        '[SEC]   Cybersecurity & Application Security',
+        '[OPS]   Cloud & DevOps Engineering',
         '[AI]    Prompt Engineering & AI Systems',
       ];
     },
     whoami() {
       return [
-        'Taiwo Micheal Glass — trading as AlphaDevelopmental Technologies.',
-        'Based in Lagos, Nigeria. Engagements in Ibadan.',
+        'Taiwo Micheal Glass — Cybersecurity & DevOps Engineer, Application',
+        'Security Specialist, and Product Engineer. Trading as',
+        'AlphaDevelopmental Technologies. Based in Lagos, Nigeria.',
       ];
     },
     projects() {
@@ -93,9 +94,10 @@ const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
     { label: 'Copy email address', hint: 'copy', run: copyEmail },
     { label: 'Open GitHub', hint: '↗ external', run: () => window.open('https://github.com/AlphaDevelopmental', '_blank', 'noopener') },
     { label: 'Open HackerOne profile', hint: '↗ external', run: () => window.open('https://hackerone.com/glassglow_sec', '_blank', 'noopener') },
-    { label: 'Filter projects: WebDev', hint: 'filter', run: () => { scrollTo('#projects'); applyFilter('webdev'); } },
+    { label: 'Filter projects: Product Eng', hint: 'filter', run: () => { scrollTo('#projects'); applyFilter('webdev'); } },
     { label: 'Filter projects: AppSec', hint: 'filter', run: () => { scrollTo('#projects'); applyFilter('appsec'); } },
-    { label: 'Filter projects: Training', hint: 'filter', run: () => { scrollTo('#projects'); applyFilter('training'); } },
+    { label: 'Filter projects: DevOps', hint: 'filter', run: () => { scrollTo('#projects'); applyFilter('devops'); } },
+    { label: 'Filter projects: AI Systems', hint: 'filter', run: () => { scrollTo('#projects'); applyFilter('ai'); } },
   ];
 
   let selected = 0;
