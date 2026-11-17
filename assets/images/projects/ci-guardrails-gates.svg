@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270" role="img" aria-labelledby="t d">
+<title id="t">AppSec CI Guardrails gate pipeline</title>
+<desc id="d">On every push, Gitleaks secrets detection runs first; Semgrep SAST and Trivy SCA then run in parallel; container image scanning runs last. Merge is blocked unless all four gates pass. Seeded CWE-798, 89, 502, 78 and 215 flaws were detected by scanners; the seeded CWE-22 path traversal was missed by Semgrep and found by manual review.</desc>
+<style>
+.bg{fill:#0e1f37}.grid{stroke:#e5edf7;stroke-opacity:.045;stroke-width:1}
+.box{fill:#142b4a;stroke:#47658c;stroke-width:1.3}
+.box-gold{fill:#142b4a;stroke:#e0b53a;stroke-width:1.5}
+.box-ok{fill:#12313a;stroke:#6fd39a;stroke-width:1.4}
+.box-bad{fill:#3a1f2a;stroke:#ff8f86;stroke-width:1.4}
+.box-muted{fill:none;stroke:#7f93ad;stroke-width:1.2;stroke-dasharray:5 4}
+.zone{fill:rgba(224,181,58,.05);stroke:#e0b53a;stroke-width:1.3;stroke-dasharray:6 5}
+.t{font:600 14px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#f3f6fb}
+.ts{font:500 12px ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;fill:#b8c7db}
+.cap{font:600 11.5px ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;fill:#e0b53a;letter-spacing:.04em}
+.ok{fill:#6fd39a}.bad{fill:#ff8f86}.gold{fill:#e0b53a}.dim{fill:#a0aec2}.blue{fill:#9cc0ea}
+.ln{stroke:#9cc0ea;stroke-width:1.6;fill:none}
+.ln-ok{stroke:#6fd39a;stroke-width:1.6;fill:none}
+.ln-bad{stroke:#ff8f86;stroke-width:1.6;fill:none}
+.ln-gold{stroke:#e0b53a;stroke-width:1.6;fill:none}
+</style>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9cc0ea"/></marker>
+<marker id="aok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6fd39a"/></marker>
+<marker id="abad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff8f86"/></marker>
+<marker id="agold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e0b53a"/></marker>
+</defs>
+<rect class="bg" width="480" height="270"/>
+<path class="grid" d="M24 0V270"/>
+<path class="grid" d="M48 0V270"/>
+<path class="grid" d="M72 0V270"/>
+<path class="grid" d="M96 0V270"/>
+<path class="grid" d="M120 0V270"/>
+<path class="grid" d="M144 0V270"/>
+<path class="grid" d="M168 0V270"/>
+<path class="grid" d="M192 0V270"/>
+<path class="grid" d="M216 0V270"/>
+<path class="grid" d="M240 0V270"/>
+<path class="grid" d="M264 0V270"/>
+<path class="grid" d="M288 0V270"/>
+<path class="grid" d="M312 0V270"/>
+<path class="grid" d="M336 0V270"/>
+<path class="grid" d="M360 0V270"/>
+<path class="grid" d="M384 0V270"/>
+<path class="grid" d="M408 0V270"/>
+<path class="grid" d="M432 0V270"/>
+<path class="grid" d="M456 0V270"/>
+<path class="grid" d="M0 24H480"/>
+<path class="grid" d="M0 48H480"/>
+<path class="grid" d="M0 72H480"/>
+<path class="grid" d="M0 96H480"/>
+<path class="grid" d="M0 120H480"/>
+<path class="grid" d="M0 144H480"/>
+<path class="grid" d="M0 168H480"/>
+<path class="grid" d="M0 192H480"/>
+<path class="grid" d="M0 216H480"/>
+<path class="grid" d="M0 240H480"/>
+<path class="grid" d="M0 264H480"/>
+<text x="16" y="26" class="cap" text-anchor="start">4 BLOCKING GATES · EVERY PUSH</text>
+<rect class="box" x="16" y="100" width="66" height="46" rx="8"/>
+<text x="49.0" y="128.0" class="t" text-anchor="middle">push</text>
+<rect class="box-gold" x="100" y="100" width="104" height="46" rx="8"/>
+<text x="152.0" y="120.0" class="t" text-anchor="middle">Secrets</text>
+<text x="152.0" y="137.0" class="ts" text-anchor="middle">Gitleaks</text>
+<rect class="box-gold" x="226" y="58" width="104" height="46" rx="8"/>
+<text x="278.0" y="78.0" class="t" text-anchor="middle">SAST</text>
+<text x="278.0" y="95.0" class="ts" text-anchor="middle">Semgrep</text>
+<rect class="box-gold" x="226" y="142" width="104" height="46" rx="8"/>
+<text x="278.0" y="162.0" class="t" text-anchor="middle">SCA</text>
+<text x="278.0" y="179.0" class="ts" text-anchor="middle">Trivy fs</text>
+<rect class="box-gold" x="352" y="100" width="112" height="46" rx="8"/>
+<text x="408.0" y="120.0" class="t" text-anchor="middle">Container</text>
+<text x="408.0" y="137.0" class="ts" text-anchor="middle">Trivy image</text>
+<path class="ln" d="M82 123H96" marker-end="url(#a)"/>
+<path class="ln" d="M204 115C214 115 214 81 222 81" marker-end="url(#a)"/>
+<path class="ln" d="M204 131C214 131 214 165 222 165" marker-end="url(#a)"/>
+<path class="ln" d="M330 81C342 81 340 115 348 115" marker-end="url(#a)"/>
+<path class="ln" d="M330 165C342 165 340 131 348 131" marker-end="url(#a)"/>
+<text x="408" y="166" class="ts" text-anchor="middle">all pass → merge</text>
+<text x="408" y="182" class="ts" text-anchor="middle">any fail → blocked</text>
+<path d="M16 206H464" stroke="#e5edf7" stroke-opacity=".12"/>
+<text x="16" y="228" class="ts" text-anchor="start" fill="#6fd39a" style="fill:#6fd39a">✓ CWE-798 · 89 · 502 · 78 · 215 — caught by a gate</text>
+<text x="16" y="252" class="ts" text-anchor="start" style="fill:#ff8f86">✗ CWE-22 path traversal — missed by Semgrep, found manually</text>
+</svg>

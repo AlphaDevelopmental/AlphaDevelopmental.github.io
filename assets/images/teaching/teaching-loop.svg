@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200" role="img" aria-labelledby="t d">
+<title id="t">Teaching loop: attack, explain, fix</title>
+<desc id="d">Each lab follows the same loop: learners attack a deliberately vulnerable system, explain the root cause in code, then fix it and re-test.</desc>
+<style>
+.bg{fill:#0e1f37}.grid{stroke:#e5edf7;stroke-opacity:.045;stroke-width:1}
+.box{fill:#142b4a;stroke:#47658c;stroke-width:1.3}
+.box-gold{fill:#142b4a;stroke:#e0b53a;stroke-width:1.5}
+.box-ok{fill:#12313a;stroke:#6fd39a;stroke-width:1.4}
+.box-bad{fill:#3a1f2a;stroke:#ff8f86;stroke-width:1.4}
+.box-muted{fill:none;stroke:#7f93ad;stroke-width:1.2;stroke-dasharray:5 4}
+.zone{fill:rgba(224,181,58,.05);stroke:#e0b53a;stroke-width:1.3;stroke-dasharray:6 5}
+.t{font:600 14px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#f3f6fb}
+.ts{font:500 12px ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;fill:#b8c7db}
+.cap{font:600 11.5px ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;fill:#e0b53a;letter-spacing:.04em}
+.ok{fill:#6fd39a}.bad{fill:#ff8f86}.gold{fill:#e0b53a}.dim{fill:#a0aec2}.blue{fill:#9cc0ea}
+.ln{stroke:#9cc0ea;stroke-width:1.6;fill:none}
+.ln-ok{stroke:#6fd39a;stroke-width:1.6;fill:none}
+.ln-bad{stroke:#ff8f86;stroke-width:1.6;fill:none}
+.ln-gold{stroke:#e0b53a;stroke-width:1.6;fill:none}
+</style>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9cc0ea"/></marker>
+<marker id="aok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6fd39a"/></marker>
+<marker id="abad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff8f86"/></marker>
+<marker id="agold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e0b53a"/></marker>
+</defs>
+<rect class="bg" width="480" height="200"/>
+<path class="grid" d="M24 0V200"/>
+<path class="grid" d="M48 0V200"/>
+<path class="grid" d="M72 0V200"/>
+<path class="grid" d="M96 0V200"/>
+<path class="grid" d="M120 0V200"/>
+<path class="grid" d="M144 0V200"/>
+<path class="grid" d="M168 0V200"/>
+<path class="grid" d="M192 0V200"/>
+<path class="grid" d="M216 0V200"/>
+<path class="grid" d="M240 0V200"/>
+<path class="grid" d="M264 0V200"/>
+<path class="grid" d="M288 0V200"/>
+<path class="grid" d="M312 0V200"/>
+<path class="grid" d="M336 0V200"/>
+<path class="grid" d="M360 0V200"/>
+<path class="grid" d="M384 0V200"/>
+<path class="grid" d="M408 0V200"/>
+<path class="grid" d="M432 0V200"/>
+<path class="grid" d="M456 0V200"/>
+<path class="grid" d="M0 24H480"/>
+<path class="grid" d="M0 48H480"/>
+<path class="grid" d="M0 72H480"/>
+<path class="grid" d="M0 96H480"/>
+<path class="grid" d="M0 120H480"/>
+<path class="grid" d="M0 144H480"/>
+<path class="grid" d="M0 168H480"/>
+<path class="grid" d="M0 192H480"/>
+<text x="16" y="26" class="cap" text-anchor="start">EVERY LAB, THE SAME LOOP</text>
+<rect class="box-bad" x="16" y="50" width="136" height="62" rx="8"/>
+<text x="84.0" y="78.0" class="t" text-anchor="middle">1 · Attack</text>
+<text x="84.0" y="95.0" class="ts" text-anchor="middle">exploit the flaw</text>
+<path class="ln-gold" d="M152 81H168" marker-end="url(#agold)"/>
+<rect class="box-gold" x="172" y="50" width="136" height="62" rx="8"/>
+<text x="240.0" y="78.0" class="t" text-anchor="middle">2 · Explain</text>
+<text x="240.0" y="95.0" class="ts" text-anchor="middle">root cause in code</text>
+<path class="ln-gold" d="M308 81H324" marker-end="url(#agold)"/>
+<rect class="box-ok" x="328" y="50" width="136" height="62" rx="8"/>
+<text x="396.0" y="78.0" class="t" text-anchor="middle">3 · Fix</text>
+<text x="396.0" y="95.0" class="ts" text-anchor="middle">patch &amp; re-test</text>
+<path class="ln" d="M396 112V140H84V116" marker-end="url(#a)"/>
+<text x="240" y="162" class="ts" text-anchor="middle">next vulnerability class</text>
+</svg>

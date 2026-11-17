@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" role="img" aria-labelledby="t d">
+<title id="t">From investigation to curriculum</title>
+<desc id="d">The research method: investigate how a real system fails, reproduce it in a controlled lab, document the evidence and its limits, then teach it. These stages produce technical investigations, research prototypes and laboratory demonstrations. No peer-reviewed publication is listed at present.</desc>
+<style>
+.bg{fill:#0e1f37}.grid{stroke:#e5edf7;stroke-opacity:.045;stroke-width:1}
+.box{fill:#142b4a;stroke:#47658c;stroke-width:1.3}
+.box-gold{fill:#142b4a;stroke:#e0b53a;stroke-width:1.5}
+.box-ok{fill:#12313a;stroke:#6fd39a;stroke-width:1.4}
+.box-bad{fill:#3a1f2a;stroke:#ff8f86;stroke-width:1.4}
+.box-muted{fill:none;stroke:#7f93ad;stroke-width:1.2;stroke-dasharray:5 4}
+.zone{fill:rgba(224,181,58,.05);stroke:#e0b53a;stroke-width:1.3;stroke-dasharray:6 5}
+.t{font:600 14px system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;fill:#f3f6fb}
+.ts{font:500 12px ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;fill:#b8c7db}
+.cap{font:600 11.5px ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;fill:#e0b53a;letter-spacing:.04em}
+.ok{fill:#6fd39a}.bad{fill:#ff8f86}.gold{fill:#e0b53a}.dim{fill:#a0aec2}.blue{fill:#9cc0ea}
+.ln{stroke:#9cc0ea;stroke-width:1.6;fill:none}
+.ln-ok{stroke:#6fd39a;stroke-width:1.6;fill:none}
+.ln-bad{stroke:#ff8f86;stroke-width:1.6;fill:none}
+.ln-gold{stroke:#e0b53a;stroke-width:1.6;fill:none}
+</style>
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#9cc0ea"/></marker>
+<marker id="aok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6fd39a"/></marker>
+<marker id="abad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#ff8f86"/></marker>
+<marker id="agold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e0b53a"/></marker>
+</defs>
+<rect class="bg" width="480" height="300"/>
+<path class="grid" d="M24 0V300"/>
+<path class="grid" d="M48 0V300"/>
+<path class="grid" d="M72 0V300"/>
+<path class="grid" d="M96 0V300"/>
+<path class="grid" d="M120 0V300"/>
+<path class="grid" d="M144 0V300"/>
+<path class="grid" d="M168 0V300"/>
+<path class="grid" d="M192 0V300"/>
+<path class="grid" d="M216 0V300"/>
+<path class="grid" d="M240 0V300"/>
+<path class="grid" d="M264 0V300"/>
+<path class="grid" d="M288 0V300"/>
+<path class="grid" d="M312 0V300"/>
+<path class="grid" d="M336 0V300"/>
+<path class="grid" d="M360 0V300"/>
+<path class="grid" d="M384 0V300"/>
+<path class="grid" d="M408 0V300"/>
+<path class="grid" d="M432 0V300"/>
+<path class="grid" d="M456 0V300"/>
+<path class="grid" d="M0 24H480"/>
+<path class="grid" d="M0 48H480"/>
+<path class="grid" d="M0 72H480"/>
+<path class="grid" d="M0 96H480"/>
+<path class="grid" d="M0 120H480"/>
+<path class="grid" d="M0 144H480"/>
+<path class="grid" d="M0 168H480"/>
+<path class="grid" d="M0 192H480"/>
+<path class="grid" d="M0 216H480"/>
+<path class="grid" d="M0 240H480"/>
+<path class="grid" d="M0 264H480"/>
+<path class="grid" d="M0 288H480"/>
+<text x="16" y="26" class="cap" text-anchor="start">METHOD → OUTPUT TYPE</text>
+<rect class="box-gold" x="16" y="46" width="104" height="54" rx="8"/>
+<text x="68.0" y="70.0" class="t" text-anchor="middle">Investigate</text>
+<text x="68.0" y="87.0" class="ts" text-anchor="middle">how it fails</text>
+<path class="ln-gold" d="M120 73H128" marker-end="url(#agold)"/>
+<rect class="box-gold" x="132" y="46" width="104" height="54" rx="8"/>
+<text x="184.0" y="70.0" class="t" text-anchor="middle">Reproduce</text>
+<text x="184.0" y="87.0" class="ts" text-anchor="middle">in a lab</text>
+<path class="ln-gold" d="M236 73H244" marker-end="url(#agold)"/>
+<rect class="box-gold" x="248" y="46" width="104" height="54" rx="8"/>
+<text x="300.0" y="70.0" class="t" text-anchor="middle">Document</text>
+<text x="300.0" y="87.0" class="ts" text-anchor="middle">evidence</text>
+<path class="ln-gold" d="M352 73H360" marker-end="url(#agold)"/>
+<rect class="box-gold" x="364" y="46" width="104" height="54" rx="8"/>
+<text x="416.0" y="70.0" class="t" text-anchor="middle">Teach</text>
+<text x="416.0" y="87.0" class="ts" text-anchor="middle">curriculum</text>
+<path class="ln" d="M412 100V116H68V104" marker-end="url(#a)"/>
+<text x="240" y="132" class="ts" text-anchor="middle">repeat with the next system</text>
+<rect x="16" y="152" width="448" height="28" rx="14" fill="none" stroke="#9cc0ea" stroke-opacity=".7"/>
+<text x="32" y="171" class="ts" text-anchor="start" style="fill:#9cc0ea">Technical investigation</text>
+<rect x="16" y="186" width="448" height="28" rx="14" fill="none" stroke="#e0b53a" stroke-opacity=".7"/>
+<text x="32" y="205" class="ts" text-anchor="start" style="fill:#e0b53a">Research prototype</text>
+<rect x="16" y="220" width="448" height="28" rx="14" fill="none" stroke="#6fd39a" stroke-opacity=".7"/>
+<text x="32" y="239" class="ts" text-anchor="start" style="fill:#6fd39a">Laboratory demonstration</text>
+<rect class="box-muted" x="16" y="256" width="448" height="28" rx="14"/>
+<text x="32" y="275" class="ts" text-anchor="start" style="fill:#a0aec2">Peer-reviewed publication — none listed yet</text>
+</svg>

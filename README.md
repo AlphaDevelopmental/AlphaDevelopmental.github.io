@@ -21,6 +21,12 @@ index.html    → page structure, content, SEO metadata and JSON-LD (Person)
 style.css     → design tokens (AlphaDevelopmental navy and gold) and layout
 script.js     → terminal, command palette, project filters, mobile menu, contact form
 assets/       → logo, favicons and the social-sharing image (og-image.png)
+  images/
+    profile/   → portrait (currently an abstract placeholder)
+    projects/  → project screenshots (WebP) and diagrams (SVG)
+    research/  → research diagrams
+    teaching/  → teaching diagram (+ consented photos, when supplied)
+    ventures/  → official AlphaDevelopmental mark
 robots.txt    → crawler rules and sitemap pointer
 sitemap.xml   → single-page sitemap
 ```
@@ -52,6 +58,11 @@ Motion effects are disabled for visitors who prefer reduced motion.
   counts and the hero project figure are calculated from the cards, so they update automatically.
 - **Credentials:** rows in the `#credentials` log table. The terminal's `certs` command reads
   this table directly.
+- **Images:** each project card starts with a `.project-visual` labelled *Screenshot* or *Diagram*. Use 16:9
+  WebP for screenshots, strip metadata, set `width`/`height`, `loading="lazy"` and descriptive alt text.
+  See `IMAGE-ASSET-INVENTORY.md`.
+- **Portrait:** replace `portrait-placeholder.svg` in the three `.portrait` figures and remove `is-placeholder`.
+  See `PHOTO-AND-SCREENSHOT-REQUESTS.md`.
 - After changing content, update `<lastmod>` in `sitemap.xml`.
 
 ## Local preview

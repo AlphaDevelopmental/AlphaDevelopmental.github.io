@@ -164,6 +164,11 @@
     </div>
 
     <div class="hero-right">
+      <!-- Portrait component. While no approved photograph exists it shows neutral abstract
+           artwork (decorative, alt=""). To add a photo: see PHOTO-AND-SCREENSHOT-REQUESTS.md. -->
+      <figure class="portrait portrait--hero is-placeholder">
+        <img src="assets/images/profile/portrait-placeholder.svg" alt="" width="800" height="1000" fetchpriority="high" decoding="async">
+      </figure>
       <div class="terminal" id="terminal">
         <div class="terminal-bar" aria-hidden="true">
           <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
@@ -196,6 +201,15 @@
       <h2 id="aboutTitle">About me</h2>
     </div>
     <div class="about-grid">
+      <div class="profile-card">
+        <figure class="portrait portrait--about is-placeholder">
+          <img src="assets/images/profile/portrait-placeholder.svg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+        </figure>
+        <div class="profile-meta">
+          <p class="profile-name">Ajani Taiwo Micheal</p>
+          <p class="profile-place mono">Ibadan, Nigeria</p>
+        </div>
+      </div>
       <div class="about-bio">
         <p class="lead">
           Ajani Taiwo Micheal is a Nigerian cybersecurity researcher, technology entrepreneur and
@@ -214,8 +228,26 @@
           He is passionate about bridging academic learning and practical industry competence,
           strengthening Africa’s cybersecurity workforce and advancing secure technological innovation.
         </p>
-      </div>
-      <aside class="about-aside" aria-labelledby="specTitle">
+
+        <h3 class="sr-only">Three connected areas of work</h3>
+        <ul class="pillars">
+          <li class="pillar">
+            <span class="pillar-key mono">research</span>
+            <p>Applied security research into how web, API and AI-integrated systems fail.</p>
+            <a class="pillar-link mono" href="#research">Research &amp; outputs <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="pillar">
+            <span class="pillar-key mono">entrepreneurship</span>
+            <p>Founder of AlphaDevelopmental — its Academy and Technologies divisions.</p>
+            <a class="pillar-link mono" href="#ventures">Ventures <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="pillar">
+            <span class="pillar-key mono">teaching</span>
+            <p>Cybersecurity instruction and curriculum development at SQI College of ICT.</p>
+            <a class="pillar-link mono" href="#teaching">Teaching <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+
         <h3 id="specTitle" class="mono aside-title">// specialisations</h3>
         <ul class="spec-list">
           <li>Application Security</li>
@@ -226,7 +258,7 @@
           <li>Cybersecurity Curriculum Development</li>
           <li>Applied Security Research</li>
         </ul>
-      </aside>
+      </div>
     </div>
   </section>
 
@@ -283,6 +315,19 @@
         <p>Competency-based curriculum and lab design that closes the gap between academic learning and industry practice.</p>
       </li>
     </ul>
+
+    <div class="figure-grid">
+      <figure class="diagram">
+        <img src="assets/images/research/research-areas-system-map.svg" width="480" height="300" loading="lazy" decoding="async"
+             alt="Layered map of a web system. Browser: R3 CORS and Same-Origin Policy. Token: R4 JWT security. Access checks for authentication, authorisation and ownership: R2. Application and API: R1. LLM and agent tools: R7 AI security. Build pipeline: R6 DevSecOps. R5 security automation probes the system from outside, and R8 education turns each layer into a hands-on lab.">
+        <figcaption><span class="fig-kind mono">Diagram</span> How the eight research areas map onto the layers of one web system.</figcaption>
+      </figure>
+      <figure class="diagram">
+        <img src="assets/images/research/research-method-outputs.svg" width="480" height="300" loading="lazy" decoding="async"
+             alt="Research method in four repeating stages: investigate how a system fails, reproduce it in a lab, document the evidence, teach it through curriculum. The resulting output types are technical investigations, research prototypes and laboratory demonstrations. No peer-reviewed publication is listed yet.">
+        <figcaption><span class="fig-kind mono">Diagram</span> The working method, and the output types it produces.</figcaption>
+      </figure>
+    </div>
 
     <h3 class="sub-head">Research outputs by type</h3>
     <p class="section-note">
@@ -360,8 +405,13 @@
 
     <div class="project-grid" id="projectGrid">
 
-      <article class="project-card tilt-card" id="p-devsecops" data-cat="devsecops">
+      <article class="project-card tilt-card has-visual" id="p-devsecops" data-cat="devsecops">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--shot">
+          <img src="assets/images/projects/devsecops-pipeline-run-success.webp" width="960" height="540" loading="lazy" decoding="async"
+               alt="GitHub Actions run #11, “Remediate CVE-2023-30861: upgrade Flask to patched version”: status Success. Secrets Detection (Gitleaks), Static Application Security Testing (Semgrep) and Software Composition Analysis (Trivy) all passed; the Gitleaks summary reads “No leaks detected”.">
+          <figcaption class="pv-kind mono">Screenshot</figcaption>
+        </figure>
         <div class="project-top"><span class="project-cat mono cat-devsecops">DevSecOps</span><span class="status status--done mono">Complete</span></div>
         <h3>DevSecOps Security Gate Pipeline</h3>
         <p class="project-problem">Vulnerable code, leaked credentials and outdated dependencies reaching deployment unchecked.</p>
@@ -373,8 +423,13 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/devsecops-sast-sca-pipeline" target="_blank" rel="noopener">Repository<span class="sr-only">: DevSecOps Security Gate Pipeline (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="project-card tilt-card" id="p-ci-guardrails" data-cat="devsecops">
+      <article class="project-card tilt-card has-visual" id="p-ci-guardrails" data-cat="devsecops">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--diag">
+          <img src="assets/images/projects/ci-guardrails-gates.svg" width="480" height="270" loading="lazy" decoding="async"
+               alt="Pipeline diagram: on push, Gitleaks secrets detection runs first, then Semgrep SAST and Trivy SCA in parallel, then Trivy container image scanning; any failure blocks the merge. Seeded CWE-798, 89, 502, 78 and 215 flaws were caught by a gate; the seeded CWE-22 path traversal was missed by Semgrep and found manually.">
+          <figcaption class="pv-kind mono">Diagram</figcaption>
+        </figure>
         <div class="project-top"><span class="project-cat mono cat-devsecops">DevSecOps</span><span class="status status--done mono">Complete</span></div>
         <h3>AppSec CI Guardrails</h3>
         <p class="project-problem">Does a CI security-gate design generalise beyond the codebase it was built for?</p>
@@ -386,8 +441,13 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/appsec-ci-guardrails" target="_blank" rel="noopener">Repository<span class="sr-only">: AppSec CI Guardrails (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="project-card tilt-card" id="p-ai-triage" data-cat="ai">
+      <article class="project-card tilt-card has-visual" id="p-ai-triage" data-cat="ai">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--diag">
+          <img src="assets/images/projects/ai-triage-context-boundary.svg" width="480" height="270" loading="lazy" decoding="async"
+               alt="Diagram: a synthetic target, an AppSec policy, SAST results and a brief template feed an AI agent through a context manifest that defines what it may read; the agent produces a remediation brief and a proposed fix for human review.">
+          <figcaption class="pv-kind mono">Diagram</figcaption>
+        </figure>
         <div class="project-top"><span class="project-cat mono cat-ai">AI security</span><span class="status status--wip mono">In progress</span></div>
         <h3>AI-Agent AppSec Triage</h3>
         <p class="project-problem">Can an AI agent triage SAST findings against an internal AppSec policy and produce a reviewable remediation brief and fix?</p>
@@ -399,8 +459,13 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/appsec-triage-capstone" target="_blank" rel="noopener">Repository<span class="sr-only">: AI-Agent AppSec Triage (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="project-card tilt-card" id="p-osiris" data-cat="recon">
+      <article class="project-card tilt-card has-visual" id="p-osiris" data-cat="recon">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--diag">
+          <img src="assets/images/projects/osiris-recon-pipeline.svg" width="480" height="270" loading="lazy" decoding="async"
+               alt="Architecture diagram: a registry of 71 operations, a safe API client, discovery and enrichment within scope, analysis, and a report with severity and confidence. Active mode requires explicit enable, authorisation and scope flags and writes a JSONL audit log.">
+          <figcaption class="pv-kind mono">Diagram</figcaption>
+        </figure>
         <div class="project-top"><span class="project-cat mono cat-recon">Recon &amp; OSINT</span><span class="status status--active mono">Active</span></div>
         <h3>OSIRIS Intelligence Recon</h3>
         <p class="project-problem">Reconnaissance and threat-intelligence collection that stays within authorised scope and reports what it could not verify.</p>
@@ -412,8 +477,13 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/osiris-intelligence-recon" target="_blank" rel="noopener">Repository<span class="sr-only">: OSIRIS Intelligence Recon (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="project-card tilt-card" id="p-cors" data-cat="appsec">
+      <article class="project-card tilt-card has-visual" id="p-cors" data-cat="appsec">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--diag">
+          <img src="assets/images/projects/cors-misconfig-vs-fixed.svg" width="480" height="270" loading="lazy" decoding="async"
+               alt="Diagram comparing two CORS policies. Misconfigured: the API reflects the attacker’s origin with Allow-Credentials true, so the attacker reads account data. Fixed: the API uses an exact allowlist and sends no CORS headers to untrusted origins, so the browser blocks the read.">
+          <figcaption class="pv-kind mono">Diagram</figcaption>
+        </figure>
         <div class="project-top"><span class="project-cat mono cat-appsec">Application security</span><span class="status status--done mono">Complete</span></div>
         <h3>CORS &amp; SOP Misconfiguration Lab</h3>
         <p class="project-problem">CORS misconfigurations are common in production APIs yet poorly understood by developers.</p>
@@ -425,8 +495,13 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/CORS-SOP-lab" target="_blank" rel="noopener">Repository<span class="sr-only">: CORS and SOP Misconfiguration Lab (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="project-card tilt-card" id="p-jwt" data-cat="appsec">
+      <article class="project-card tilt-card has-visual" id="p-jwt" data-cat="appsec">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--diag">
+          <img src="assets/images/projects/jwt-broken-vs-safe.svg" width="480" height="270" loading="lazy" decoding="async"
+               alt="Diagram of a JWT’s header, payload and signature. A broken server accepts alg none or a weak secret without verifying, so a forged token is accepted; a safe server pins the algorithm, verifies the signature and checks expiry, so the forged token is rejected.">
+          <figcaption class="pv-kind mono">Diagram</figcaption>
+        </figure>
         <div class="project-top"><span class="project-cat mono cat-appsec">Application security</span><span class="status status--done mono">Complete</span></div>
         <h3>JWT Security Lab</h3>
         <p class="project-problem">Token-based authentication is often implemented with exploitable shortcuts.</p>
@@ -438,8 +513,13 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/JWT-security-lab" target="_blank" rel="noopener">Repository<span class="sr-only">: JWT Security Lab (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="project-card tilt-card" id="p-bac" data-cat="appsec">
+      <article class="project-card tilt-card has-visual" id="p-bac" data-cat="appsec">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--diag">
+          <img src="assets/images/projects/bac-three-checks.svg" width="480" height="270" loading="lazy" decoding="async"
+               alt="Diagram: a request for expense 42 must pass three separate checks — authentication, authorisation and ownership. The lab’s flaws map to each: JWT forgery, privilege escalation and IDOR.">
+          <figcaption class="pv-kind mono">Diagram</figcaption>
+        </figure>
         <div class="project-top"><span class="project-cat mono cat-appsec">Application security</span><span class="status status--done mono">Complete</span></div>
         <h3>Broken Access Control Lab</h3>
         <p class="project-problem">Broken access control tops the OWASP Top 10 (A01:2021) yet is easy to miss in review.</p>
@@ -451,8 +531,47 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/Broken-access-control_lab" target="_blank" rel="noopener">Repository<span class="sr-only">: Broken Access Control Lab (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
+      <article class="project-card tilt-card has-visual" id="p-minibank" data-cat="software">
+        <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--shot">
+          <img src="assets/images/projects/mini-bank-user-dashboard.webp" width="960" height="540" loading="lazy" decoding="async"
+               alt="Mini Bank user dashboard from a local test run: a zero balance with a notice that deposits and withdrawals need admin approval, and forms to request a deposit, request a withdrawal and transfer money.">
+          <figcaption class="pv-kind mono">Screenshot</figcaption>
+        </figure>
+        <div class="project-top"><span class="project-cat mono cat-software">Secure software</span><span class="status status--done mono">Complete</span></div>
+        <h3>Mini Bank</h3>
+        <p class="project-problem">Financial workflows need layered access control and resistance to credential abuse.</p>
+        <dl class="project-meta">
+          <div><dt>My contribution</dt><dd>PHP 8.3 OOP banking application with bcrypt password hashing, login rate limiting and lockout, admin-approved deposits and withdrawals, and typed enums for roles and states.</dd></div>
+          <div><dt>Significance</dt><dd>Security-first application design applied to a transactional domain.</dd></div>
+        </dl>
+        <ul class="project-tags mono" aria-label="Technologies"><li>PHP 8.3</li><li>OOP</li><li>Rate limiting</li></ul>
+        <a class="project-link mono" href="https://github.com/AlphaDevelopmental/mini-bank" target="_blank" rel="noopener">Repository<span class="sr-only">: Mini Bank (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
+      </article>
+
+      <article class="project-card tilt-card has-visual" id="p-seclab" data-cat="infra">
+        <div class="card-spotlight" aria-hidden="true"></div>
+        <figure class="project-visual project-visual--diag">
+          <img src="assets/images/projects/security-lab-topology.svg" width="480" height="270" loading="lazy" decoding="async"
+               alt="Topology diagram: a learner on localhost reaches a Docker Compose lab whose profiles start Juice Shop, DVWA, Mutillidae, WebGoat, the custom VulnBank Flask app, API and GraphQL apps and an SSRF app; Portainer is bound to localhost.">
+          <figcaption class="pv-kind mono">Diagram</figcaption>
+        </figure>
+        <div class="project-top"><span class="project-cat mono cat-infra">Lab infrastructure</span><span class="status status--active mono">Active</span></div>
+        <h3>Dockerised Security Lab</h3>
+        <p class="project-problem">Learners need a safe, reproducible environment for offensive and defensive practice.</p>
+        <dl class="project-meta">
+          <div><dt>My contribution</dt><dd>Docker Compose environment with lab profiles bundling Juice Shop, DVWA, Mutillidae, WebGoat, a custom VulnBank Flask app, and API/GraphQL and SSRF targets.</dd></div>
+          <div><dt>Significance</dt><dd>An isolated, instructor-friendly lab used in weekly teaching.</dd></div>
+        </dl>
+        <ul class="project-tags mono" aria-label="Technologies"><li>Docker Compose</li><li>Flask</li><li>GraphQL</li></ul>
+        <a class="project-link mono" href="https://github.com/AlphaDevelopmental/security-lab" target="_blank" rel="noopener">Repository<span class="sr-only">: Dockerised Security Lab (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
+      </article>
+
       <article class="project-card tilt-card" id="p-cookie" data-cat="appsec">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <div class="project-visual project-visual--plain" aria-hidden="true">
+          <span class="pv-path mono">~/cookies-CTF_lab</span>
+        </div>
         <div class="project-top"><span class="project-cat mono cat-appsec">Application security</span><span class="status status--done mono">Complete</span></div>
         <h3>Cookie Security Lab</h3>
         <p class="project-problem">Cookie and session weaknesses enable authorisation bypass and account takeover.</p>
@@ -466,6 +585,9 @@
 
       <article class="project-card tilt-card" id="p-portswigger" data-cat="appsec">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <div class="project-visual project-visual--plain" aria-hidden="true">
+          <span class="pv-path mono">~/portswigger-security-labs</span>
+        </div>
         <div class="project-top"><span class="project-cat mono cat-appsec">Application security</span><span class="status status--active mono">Ongoing</span></div>
         <h3>Web Security Academy Lab Reconstructions</h3>
         <p class="project-problem">Solving a lab proves an exploit works, but not why the server is vulnerable.</p>
@@ -477,21 +599,11 @@
         <a class="project-link mono" href="https://github.com/AlphaDevelopmental/portswigger-security-labs" target="_blank" rel="noopener">Repository<span class="sr-only">: Web Security Academy Lab Reconstructions (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
       </article>
 
-      <article class="project-card tilt-card" id="p-seclab" data-cat="infra">
-        <div class="card-spotlight" aria-hidden="true"></div>
-        <div class="project-top"><span class="project-cat mono cat-infra">Lab infrastructure</span><span class="status status--active mono">Active</span></div>
-        <h3>Dockerised Security Lab</h3>
-        <p class="project-problem">Learners need a safe, reproducible environment for offensive and defensive practice.</p>
-        <dl class="project-meta">
-          <div><dt>My contribution</dt><dd>Docker Compose environment with lab profiles bundling Juice Shop, DVWA, Mutillidae, WebGoat, a custom VulnBank Flask app, and API/GraphQL and SSRF targets.</dd></div>
-          <div><dt>Significance</dt><dd>An isolated, instructor-friendly lab used in weekly teaching.</dd></div>
-        </dl>
-        <ul class="project-tags mono" aria-label="Technologies"><li>Docker Compose</li><li>Flask</li><li>GraphQL</li></ul>
-        <a class="project-link mono" href="https://github.com/AlphaDevelopmental/security-lab" target="_blank" rel="noopener">Repository<span class="sr-only">: Dockerised Security Lab (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
-      </article>
-
       <article class="project-card tilt-card" id="p-cyberfloor" data-cat="infra">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <div class="project-visual project-visual--plain" aria-hidden="true">
+          <span class="pv-path mono">cyber range · self-hosted</span>
+        </div>
         <div class="project-top"><span class="project-cat mono cat-infra">Lab infrastructure</span><span class="status status--wip mono">In progress</span></div>
         <h3>CyberFloor Cyber Range</h3>
         <p class="project-problem">Hosted training platforms limit realism and control over the underlying infrastructure.</p>
@@ -505,6 +617,9 @@
 
       <article class="project-card tilt-card" id="p-azure" data-cat="infra">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <div class="project-visual project-visual--plain" aria-hidden="true">
+          <span class="pv-path mono">~/azure-*</span>
+        </div>
         <div class="project-top"><span class="project-cat mono cat-infra">Cloud</span><span class="status status--partial mono">Partly documented</span></div>
         <h3>Azure Cloud Infrastructure &amp; Governance</h3>
         <p class="project-problem">Cloud environments need repeatable provisioning, consistent governance and cost-aware platform decisions.</p>
@@ -520,21 +635,11 @@
         </ul>
       </article>
 
-      <article class="project-card tilt-card" id="p-minibank" data-cat="software">
-        <div class="card-spotlight" aria-hidden="true"></div>
-        <div class="project-top"><span class="project-cat mono cat-software">Secure software</span><span class="status status--done mono">Complete</span></div>
-        <h3>Mini Bank</h3>
-        <p class="project-problem">Financial workflows need layered access control and resistance to credential abuse.</p>
-        <dl class="project-meta">
-          <div><dt>My contribution</dt><dd>PHP 8.3 OOP banking application with bcrypt password hashing, login rate limiting and lockout, admin-approved deposits and withdrawals, and typed enums for roles and states.</dd></div>
-          <div><dt>Significance</dt><dd>Security-first application design applied to a transactional domain.</dd></div>
-        </dl>
-        <ul class="project-tags mono" aria-label="Technologies"><li>PHP 8.3</li><li>OOP</li><li>Rate limiting</li></ul>
-        <a class="project-link mono" href="https://github.com/AlphaDevelopmental/mini-bank" target="_blank" rel="noopener">Repository<span class="sr-only">: Mini Bank (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
-      </article>
-
       <article class="project-card tilt-card" id="p-dorking" data-cat="recon">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <div class="project-visual project-visual--plain" aria-hidden="true">
+          <span class="pv-path mono">~/bug-bounty-dorking-tool</span>
+        </div>
         <div class="project-top"><span class="project-cat mono cat-recon">Recon &amp; OSINT</span><span class="status status--done mono">Complete</span></div>
         <h3>Bug Bounty Dorking Tool</h3>
         <p class="project-problem">Writing targeted search-engine queries for reconnaissance is slow and error-prone.</p>
@@ -548,6 +653,9 @@
 
       <article class="project-card tilt-card" id="p-resolvers" data-cat="recon">
         <div class="card-spotlight" aria-hidden="true"></div>
+        <div class="project-visual project-visual--plain" aria-hidden="true">
+          <span class="pv-path mono">~/cyber_resolvers</span>
+        </div>
         <div class="project-top"><span class="project-cat mono cat-recon">Recon &amp; OSINT</span><span class="status status--early mono">Early work</span></div>
         <h3>Subdomain Resolution Scripts</h3>
         <p class="project-problem">Turning subdomain-enumeration output into resolved, de-duplicated host lists.</p>
@@ -685,6 +793,12 @@
       <p class="section-desc">Hands-on, competency-based security education: learners attack a system, explain the root cause, then fix it.</p>
     </div>
 
+    <figure class="diagram diagram--wide">
+      <img src="assets/images/teaching/teaching-loop.svg" width="480" height="200" loading="lazy" decoding="async"
+           alt="Teaching loop used in every lab: 1, attack — exploit the flaw; 2, explain — find the root cause in code; 3, fix — patch and re-test; then move to the next vulnerability class.">
+      <figcaption><span class="fig-kind mono">Diagram</span> The loop every laboratory follows.</figcaption>
+    </figure>
+
     <div class="teach-grid">
       <article class="teach-card">
         <h3>Diploma curriculum audit &amp; redesign</h3>
@@ -715,6 +829,20 @@
         <p>A written secure-coding standard used for security code review of student projects, explaining each flaw and its remediation so that security becomes part of everyday development.</p>
       </article>
     </div>
+
+    <!-- OPTIONAL GALLERY — uncomment once authentic photographs are available.
+         Publish only photos with the consent of everyone identifiable (see PHOTO-AND-SCREENSHOT-REQUESTS.md).
+    <h3 class="sub-head">In the classroom and lab</h3>
+    <ul class="gallery">
+      <li>
+        <figure>
+          <img src="assets/images/teaching/lab-session-01.webp" width="1200" height="900" loading="lazy" decoding="async"
+               alt="Describe what is happening, e.g. Learners working through an access-control lab at SQI College of ICT">
+          <figcaption>Short caption · place · month year</figcaption>
+        </figure>
+      </li>
+    </ul>
+    -->
   </section>
 
   <!-- ============ 8. SPEAKING ============ -->
@@ -739,6 +867,15 @@
         </ul>
       </div>
       <div class="speaker-card">
+        <div class="speaker-head">
+          <figure class="portrait portrait--avatar is-placeholder">
+            <img src="assets/images/profile/portrait-placeholder.svg" alt="" width="800" height="1000" loading="lazy" decoding="async">
+          </figure>
+          <div>
+            <p class="speaker-name">Ajani Taiwo Micheal</p>
+            <p class="speaker-role mono">Cybersecurity Researcher · Technology Entrepreneur · Educator</p>
+          </div>
+        </div>
         <h3 class="mono aside-title">// speaker biography</h3>
         <p id="speakerBio">Ajani Taiwo Micheal is a Nigerian cybersecurity researcher, technology entrepreneur and educator. He is the Founder of AlphaDevelopmental, comprising AlphaDevelopmental Technologies and AlphaDevelopmental Academy, and a cybersecurity instructor and curriculum developer at SQI College of ICT, Ibadan. His work spans application security, offensive security, DevSecOps and AI security, and he builds open-source laboratories that turn real vulnerability classes into hands-on learning. He is committed to bridging academic learning and industry practice and to strengthening Africa’s cybersecurity workforce.</p>
         <div class="speaker-actions">
@@ -749,6 +886,11 @@
         <p class="copy-status mono" id="copyBioStatus" role="status" aria-live="polite"></p>
       </div>
     </div>
+    <!-- OPTIONAL EVENT PHOTOS — add only for real, verifiable events, with organiser permission.
+    <ul class="gallery gallery--events">
+      <li><figure><img src="assets/images/speaking/event-01.webp" width="1200" height="900" loading="lazy" decoding="async" alt="…"><figcaption>Event name · city · month year</figcaption></figure></li>
+    </ul>
+    -->
   </section>
 
   <!-- ============ 9. VENTURES ============ -->
@@ -759,9 +901,18 @@
       <p class="section-desc">I founded AlphaDevelopmental to make practical technology skills and secure technology more accessible. Its two divisions have their own official website.</p>
     </div>
 
+    <a class="venture-parent" href="https://alphadevelopmental-website.netlify.app/" target="_blank" rel="noopener">
+      <img src="assets/images/ventures/alphadevelopmental-mark.svg" alt="" width="40" height="40" loading="lazy">
+      <span><span class="venture-parent-name">AlphaDevelopmental</span><span class="venture-parent-sub mono">parent organisation · official website</span></span>
+      <span class="sr-only"> (opens in new tab)</span><span class="venture-parent-arrow" aria-hidden="true">↗</span>
+    </a>
+
     <div class="venture-grid">
-      <article class="venture-card">
-        <p class="venture-label mono">Education</p>
+      <article class="venture-card venture-card--academy">
+        <div class="venture-head">
+          <img class="venture-mark" src="assets/images/ventures/alphadevelopmental-mark.svg" alt="" width="36" height="36" loading="lazy">
+          <p class="venture-label mono">Education</p>
+        </div>
         <h3>AlphaDevelopmental Academy</h3>
         <p>Practical, instructor-led technology education across Cybersecurity, Software Engineering, Digital Literacy, IT &amp; Technical Skills, and Digital Marketing.</p>
         <div class="venture-links">
@@ -769,8 +920,11 @@
           <a class="text-link mono" href="https://alphadevelopmental-website.netlify.app/academy/courses" target="_blank" rel="noopener">Browse courses<span class="sr-only"> (opens in new tab)</span> <span aria-hidden="true">↗</span></a>
         </div>
       </article>
-      <article class="venture-card">
-        <p class="venture-label mono">Technology</p>
+      <article class="venture-card venture-card--tech">
+        <div class="venture-head">
+          <img class="venture-mark" src="assets/images/ventures/alphadevelopmental-mark.svg" alt="" width="36" height="36" loading="lazy">
+          <p class="venture-label mono">Technology</p>
+        </div>
         <h3>AlphaDevelopmental Technologies</h3>
         <p>Secure software development, cybersecurity consulting and technology solutions.</p>
         <div class="venture-links">
